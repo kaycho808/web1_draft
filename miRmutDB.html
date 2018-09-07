@@ -10,18 +10,31 @@
       text-decoration: none;
       color: black;
     }
+
     h1 {
-      font-size:45px;
-      text-align:center;
-    }
-    img.c{
-      display:block;
-      margin: auto;
-    }
-    .mid {
-      text-align:center;
+      font-size: 45px;
+      text-align: center;
+      border-bottom: 3px solid black;
+      margin: 0;
+      padding: 10px;
     }
 
+    img.c {
+      display: block;
+      margin: auto;
+      padding: 10px;
+    }
+
+    .mid {
+      text-align: center;
+    }
+
+    #grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      width:400px;
+      margin:0;
+    }
   </style>
   <!--
   <style type="text/css">
@@ -36,10 +49,14 @@
 <body>
   <h1><strong><a href="miRmutDB.html">miRmut DB</a></strong></h1>
   <img src="mirmut2.jpg" width="20%" class="c" />
-  <h2 class="mid">Select catagory </h2>
-  <h3 class="mid">Cancer type</h3>
   <div align="center">
-  <select name="database_c" id="db_c" size="0">
+    <h2 class="mid">Select catagory </h2>
+    <div id="grid">
+      <h3>Cancer type</h3>
+      <h3>miRNA type</h3>
+    </div>
+    <div id="grid"  >
+      <select name="database_c" id="db_c" size="0">
     <option value="all">
       All
     </option>
@@ -53,9 +70,7 @@
       etc...
     </option>
   </select>
-  <br />
-  <h3>miRNA type</h3>
-  <select name="database_m" id="db_m" size="0">
+    <select name="database_m" id="db_m" size="0">
     <option value="all">
       All
     </option>
@@ -69,18 +84,12 @@
       etc...
     </option>
   </select>
-  <br /><br />
-  <a href="cancer.html">
+</div>
+    <br /><br /><br />
+    <a href="cancer.html">
     <input type="submit" name="submit" id="search_mut" value="search" style="cursor:pointer;" />
   </a>
-</div>
-  <!--
-  <ul>
-    <li><a href="cancer.html">Cancer type</a></li>
-    <br />
-    <li><a href="mirna.html">miRNA type</a></li>
-  </ul>
--->
+  </div>
   <div style="position: relative">
     <span style="position:fixed;bottom:5px;width:100%;text-align:center" style="font-size: 8px;">made by YKC</span>
   </div>
